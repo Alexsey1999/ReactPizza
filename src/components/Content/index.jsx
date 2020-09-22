@@ -22,7 +22,7 @@ const Content = () => {
     setIsLoading(true)
     axios
       .get(
-        `http://localhost:3001/pizzas${
+        `/pizzas${
           currentCategoryId !== null ? `?category=${currentCategoryId}&` : '?'
         }_sort=${sortFilter.type}&_order=${sortFilter.order}`
       )
